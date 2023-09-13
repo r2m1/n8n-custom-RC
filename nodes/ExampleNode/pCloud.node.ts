@@ -6,15 +6,15 @@ import {
 	NodeOperationError,
 } from 'n8n-workflow';
 
-export class ExampleNode implements INodeType {
+export class PCloud implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Example Node',
-		name: 'exampleNode',
+		displayName: 'pCloud',
+		name: 'pCloud',
 		group: ['transform'],
 		version: 1,
-		description: 'Basic Example Node',
+		description: 'pCLoud actions',
 		defaults: {
-			name: 'Example Node',
+			name: 'Pcloud',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
@@ -22,12 +22,12 @@ export class ExampleNode implements INodeType {
 			// Node properties which the user gets displayed and
 			// can change on the node.
 			{
-				displayName: 'My String',
-				name: 'myString',
+				displayName: 'uploadfile',
+				name: 'uploadfile',
 				type: 'string',
 				default: '',
-				placeholder: 'Placeholder value',
-				description: 'The description text',
+				placeholder: 'Upload a specific file',
+				description: 'Upload a file into your pCloud',
 			},
 		],
 	};
